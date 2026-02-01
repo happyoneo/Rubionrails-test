@@ -1,4 +1,11 @@
-# Load defaults for Rails version
-Rails.application.configure do
-  config.load_defaults 7.1
+require_relative "boot"
+require "rails/all"
+
+Bundler.require(*Rails.groups)
+
+module VeterinaryHospital
+  class Application < Rails::Application
+    config.load_defaults 7.1
+    config.api_only = false
+  end
 end
