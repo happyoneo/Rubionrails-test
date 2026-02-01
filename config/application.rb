@@ -1,8 +1,4 @@
-require_relative "boot"
-require "rails/all"
-
-module VeterinaryHospital
-  class Application < Rails::Application
-    config.load_defaults 8.0
-  end
+# Load defaults for Rails version
+Rails.application.configure do
+  config.load_defaults 7.1
 end
